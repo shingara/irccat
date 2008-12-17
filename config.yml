@@ -6,6 +6,9 @@ irc:
   nick_pass: foo
   channel: '#irc_cat'
   channel_pass: bar
+  # or:
+  # channel: ['#one', '#two', '#three']
+  # NB: the multichannel quickhack requires channel_pass to be hacked up. (not done (yet?))
 
 # HTTP Server
 

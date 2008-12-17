@@ -6,7 +6,7 @@ module IrcCat
 # The IRC bot
 class Bot
 
-  attr_accessor :socket, :host, :port, :nick, :channel, :nick_pass, :channel_pass
+  attr_accessor :socket, :host, :port, :nick, :channel, :nick_pass, :channel_pass, :channels
   
   # Initialize the bot with default values
   def initialize(constructor = H.new)
@@ -21,6 +21,12 @@ class Bot
         val.each do |v| instance_eval("@#{key}.push('#{v}')") end
       end
     end
+
+    if (@channel.is_a?(Array))
+      @channels = @channel
+      @channel  = @channels[0]
+    end
+
     puts "Connecting to IRC #{@host}:#{@port} #{@channel}" 
   end
   
@@ -106,7 +112,13 @@ class Bot
   # Automatic events
   
   def join_channels
-    sendln "JOIN #{@channel} #{@channel_pass}"
+    if (@channels == nil)
+      sendln "JOIN #{@channel} #{@channel_pass}"
+    else
+      @channels.each do |ch|
+        sendln "JOIN #{ch}"
+      end
+    end
   end
   
   
