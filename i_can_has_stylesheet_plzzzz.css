@@ -1,0 +1,63 @@
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+#lolcat {
+	float: left;
+	width: 113px;
+	text-align: center;
+}
+
+h1 {
+	font-size: 53px;
+	letter-spacing: -5px;
+	margin: 0;
+	padding: 0;
+}
+
+#lolcat a {
+	display: block;
+	color: black;
+	font-size: 16px;
+	text-decoration: none;
+	padding: 2px;
+	border: 1px solid white;
+}
+
+#lolcat a:hover {
+	color: white;
+	background-color: black;
+}
+
+#lolcat a.active {
+	background-color: black;
+	color: #CD3300;
+}
+
+.hl {
+	color: #CD3300;
+}
+
+.grey {
+	color: grey;
+}
+
+#content {
+	margin-left: 133px;
+	font-size: 14px;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+#footer {
+	border-top: 1px solid grey;
+	margin-left: 133px;
+	font-size: 10px;
+}

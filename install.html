@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>irccat - installation</title>
+		<link href="i_can_has_stylesheet_plzzzz.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link rel="alternate" type="application/atom+xml" title="irccat news" href="http://subtlety.errtheblog.com/O_o/2bc.xml">
+	</head>
+	<body>
+	  <div id="lolcat">
+	    <img src="ircCat.jpg" />
+	    <h1><span class="hl">irc</span>cat</h1>
+	    <a href="/">home</a>
+      <a href="install.html" class="active">installation</a>
+      <a href="use.html">how to use</a>
+			<a href="clients.html">clients</a>
+      <br />
+	    <a href="http://gemcutter.org/gems/irc_cat">download</a>
+	    <a href="http://github.com/webs/irccat/issues">bugs</a>
+	    <a href="http://github.com/webs/irccat">code</a>
+	  </div>
+    <div id="content">
+      <h2><span class="hl">You want to adopt a small <del>kitteh</del> irccat ?</span>&nbsp; Read this guide <code>:)</code></h2>
+      <h3>#1 Install the gem</h3>
+      <p>Just do: <code>gem install irc_cat</code></p>
+      <h3>#2 Configuration</h3>
+      <p>Create <code>config.yml</code>. Edit it with your prefered editor:</p>
+      <ul>
+        <li><code>irc:</code></li>
+          <ol><code>host:</code> is where you irc cat will be connected (host). For exemple, <code>irc.tty2.org</code> or <code>irc.freenode.net</code></ol>
+          <ol><code>port:</code> is the port of the IRC Server. Usually, <code>'6667'</code></ol>
+          <ol><code>nick:</code> is the nickname of your bot.</ol>
+          <ol><code>channel:</code> is the channel where you bot will stay and send messages.</ol>
+        <li><code>http:</code>
+					<ol><code>enabled:</code> Enable or not the HTTP server. Values: true, false</ol>
+          <ol><code>host:</code> is where the http server will bind. Use <code>0.0.0.0</code> to bind on all interfaces.</ol>
+          <ol><code>port:</code> is the port of the http server.</ol>
+					<ol><code>github:</code> Enable or not the github support. Values: true, false</ol>
+					<ol><code>send:</code> Enable or not the basic http send support. Values: true, false</ol>
+        <li><code>tcp:</code>
+					<ol><code>enabled:</code> Enable or not the TCP server. Values: true, false</ol>
+          <ol><code>host:</code> is where the tcp server will bind. Use <code>0.0.0.0</code> to bind on all interfaces.</ol>
+          <ol><code>port:</code> is the port of the tcp server.</ol>
+      </ul>
+			<p>View the <a href="http://github.com/webs/irccat/tree/36ea4ff49b41e582b383313019314be52df7da47/config.yml">example configuration file</a>.</p>
+      <h3>#3 Run</h3>
+      <p>Just run <code>irccat -c yourconfig.yml</code> !<br /><br />
+      Now, read the <a href="use.html">how-to use</a>.
+      </p>
+    </div>
+				<div id="footer">
+    			&copy; 2007-2009 <a href="http://webs.ly/">Jordan Bracco</a> &lt;<a href="mailto:jordan@lifeisdead.net">jordan -at- lifeisdead.net</a>&gt; &mdash; Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a> &mdash; Hosted by <a href="http://github.com/">GitHub</a><span class="grey">&nbsp;&mdash;Updated 16 December 2009 at 14:59 CEST</span>
+				</div>
+			</body>
+		</html>     

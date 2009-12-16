@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>irccat - use</title>
+		<link href="i_can_has_stylesheet_plzzzz.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link rel="alternate" type="application/atom+xml" title="irccat news" href="http://rubyforge.org/export/rss_sfnews.php?group_id=5423">
+	</head>
+	<body>
+	  <div id="lolcat">
+	    <img src="ircCat.jpg" />
+	    <h1><span class="hl">irc</span>cat</h1>
+	    <a href="/">home</a>
+      <a href="install.html">installation</a>
+      <a href="use.html" class="active">how to use</a>
+			<a href="clients.html">clients</a>
+      <br />
+	    <a href="http://gemcutter.org/gems/irc_cat">download</a>
+	    <a href="http://github.com/webs/irccat/issues">bugs</a>
+	    <a href="http://github.com/webs/irccat">code</a>
+	  </div>
+    <div id="content">
+      <h2><span class="hl">Make your new pet happy!</span>&nbsp; Utilisation guide </h2>
+      <h3>Basics</h3>
+      <h4>TCP</h4>
+      <p>Open the socket and write your message. That's all.</p>
+      <h4>HTTP</h4>
+      <p>The URL is <code>http://yourhost:port/send/the%20message</code>. Just send a <code>GET</code> HTML entites and other HTML stuff are converted.</p>
+      <h3>With utilites</h3>
+      <h4>netcat (tcp)</h4>
+      <p>Just pipe (<code>|</code>) your STDOUT to <code>nc</code>.<br />
+      <br />
+      Example: <code>echo "hello" | nc yourhost:port</code>
+      </p>
+      <h4>curl (http)</h4>
+      <p>Just call the URL with the message.<br /><br />
+      Example: <code>curl http://yourhost:port/send/hello%20%i'm%20the%20irccat!</code>
+      </p>
+			<h3>Clients!</h3>
+			<p>Read the <a href="clients.html">special page</a>.</p>
+			<h3>Github</h3>
+			<p>Edit your projet on github and set the Post-Receive URL to http://yourhostname:port/github. That's all.</p>
+      <h3>Sample uses</h3>
+      <h4>Subversion post-commit hook</h4>
+      <p>Coming soon- and 0.2 will be full of useful scripts.</p>
+    </div>
+				<div id="footer">
+    			&copy; 2007-2009 <a href="http://webs.ly/">Jordan Bracco</a> &lt;<a href="mailto:jordan@lifeisdead.net">jordan -at- lifeisdead.net</a>&gt; &mdash; Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a> &mdash; Hosted by <a href="http://github.com/">GitHub</a><span class="grey">&nbsp;&mdash;Updated 16 December 2009 at 14:59 CEST</span>
+				</div>
+			</body>
+		</html>

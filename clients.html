@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>irccat - clients</title>
+		<link href="i_can_has_stylesheet_plzzzz.css" media="screen" rel="Stylesheet" type="text/css" />
+		<link rel="alternate" type="application/atom+xml" title="irccat news" href="http://subtlety.errtheblog.com/O_o/2bc.xml">
+	</head>
+	<body>
+	  <div id="lolcat">
+	    <img src="ircCat.jpg" />
+	    <h1><span class="hl">irc</span>cat</h1>
+	    <a href="/">home</a>
+      <a href="install.html">installation</a>
+      <a href="use.html">how to use</a>
+			<a href="clients.html" class="active">clients</a>
+      <br />
+	    <a href="http://gemcutter.org/gems/irc_cat">download</a>
+	    <a href="http://github.com/webs/irccat/issues">bugs</a>
+	    <a href="http://github.com/webs/irccat">code</a>
+	  </div>
+    <div id="content">
+      <h2><span class="hl">Real world</span> usage.</h2>
+      <h3>official clients</h3>
+			<p>The official clients arent in the 0.2.0 package, so you need to install them with the standalone package: <code>gem install irc_cat_clients</code>.</p>
+			<h4 id="config">configuration</h4>
+			<ul>
+				<li>Create <code>.irccat.yml</code> in your home directory (<code>~</code>)</li>
+				<li>Add a profile in this file. The default profile is called 'default'.</li>
+			</ul>
+			Example profile:
+			<pre>
+default:
+  host: 127.0.0.1
+  port: 4849
+			</pre>
+			<h4 id="icat">icat</h4>
+			<p>It's the `<code>cat</code>` clone for irccat. It's accepts files or STDIN.<br />
+			Params: <code>-p profile_name</code></p>
+			<p>Examples:
+<pre>
+  $ ls | icat                # Sends the output of `ls` to the default profile
+  $ icat config.yml          # Sends the content of config.yml to the default profile
+  $ icat hello.txt hai.txt   # Sends the contents of hello.txt and hai.txt to the default profile
+  $ ls | icat -p haycat      # Sends the output of `ls` to the 'haycat' profile
+  $ icat <<< "HAI"           # Sends HAI to the default profile. Useless, use <a href="#iecho">iecho</a> instead
+</pre>
+		<h4 id="iecho">iecho</h4>
+		<p>Like icat, it's the `<code>echo</code>` clone for irccat.<br />
+		Params: <code>-p profile_name</code></p>
+		<p>Examples:
+<pre>
+  $ iecho "HAI2U!1"          # Sends HAI2U!1 to the default profile
+  $ iecho -p haycat "HAI"    # Sends HAI to the haycat profile
+</pre>
+		<h3 id="others">other clients</h3>
+		<p><strong><a href="http://github.com/ivey/merb-hook/tree/master">merb-hook</a></strong> (Github multi-hook (Campfire, Twitter, irccat, ...)), <strong><a href="http://github.com/webs/irccat-clients/tree/master/cat_notifier">cat notifier</a></strong> (for CruiseControl.rb).</p>
+		
+    </div>
+		<div id="footer">
+			&copy; 2007-2009 <a href="http://webs.ly/">Jordan Bracco</a> &lt;<a href="mailto:jordan@lifeisdead.net">jordan -at- lifeisdead.net</a>&gt; &mdash; Released under the <a href="http://www.opensource.org/licenses/mit-license.php">MIT license</a> &mdash; Hosted by <a href="http://github.com/">GitHub</a><span class="grey">&nbsp;&mdash;Updated 16 December 2009 at 14:59 CEST</span>
+		</div>
+	</body>
+</html>
