@@ -12,10 +12,10 @@ require 'bundler'
   s.description = s.summary
   s.homepage = "http://github.com/webs/irccat"
 
-  manifest = Bundler::Environment.load(File.dirname(__FILE__) + '/Gemfile')
+  manifest = Bundler::Definition.from_gemfile(File.dirname(__FILE__) + '/Gemfile')
   manifest.dependencies.each do |d|
-    next if d.only && d.only.include?('test')
-    s.add_dependency(d.name, d.version)
+    next if d.groups && d.groups.include?('test')
+    s.add_dependency(d.name, d.version_requirements.requirements.join(' '))
   end
 
   s.executables = %w( icat iecho irccat irccat-config )
